@@ -1,12 +1,12 @@
 # golang_exm
 
-Go Lang examples - very simple examples.
+Go Lang examples - some very simple examples.
 
-More advanced examples combining these and other features are implemented elsewhere.
+*(More advanced examples combining these and other features are implemented elsewhere.)*
 
 # How Do I Use This?
 
-Bavigate manually to one of the main root project directories (e.g. - `asyncGo`, `templateServer` and `httpServer`) using Bash:
+Navigate manually to one of the main root project directories (e.g. - `asyncGo`, `templateServer` and `httpServer`) using Bash:
 
 ```bash
 $   go run httpServer.go
@@ -48,19 +48,16 @@ Running the two server examples doesn't seem to work using the JetBrains Go IDE.
 
 As such, it's imperative to use the correct Bash commands per **How Do I Use This Above** the above.
 
-# Fantastic Resources
+## Fantastic Resources
 
-REST: http://www.blog.labouardy.com/build-restful-api-in-go-and-mongodb/
-Gin: https://gin-gonic.github.io/gin/
-
-Go Routines: https://medium.com/@nikolay.bystritskiy/how-i-tried-to-do-things-asynchronously-in-golang-40e0c1a06a66
-Go Routines: https://gobyexample.com/goroutines
-
-Static: http://www.alexedwards.net/blog/serving-static-sites-with-go
-https://rockfloat.com/post/learning-golang-templates.html
-https://stackoverflow.com/questions/26559557/how-do-you-serve-a-static-html-file-using-a-go-web-server
-
-Templates:
-
-https://medium.com/@IndianGuru/understanding-go-s-template-package-c5307758fab0
-https://rockfloat.com/post/learning-golang-templates.html
+1. REST: http://www.blog.labouardy.com/build-restful-api-in-go-and-mongodb/
+    * Gin: https://gin-gonic.github.io/gin/
+1. Go Routines: 
+    * https://medium.com/@nikolay.bystritskiy/how-i-tried-to-do-things-asynchronously-in-golang-40e0c1a06a66
+    * https://gobyexample.com/goroutines
+1. Static: http://www.alexedwards.net/blog/serving-static-sites-with-go
+    * https://rockfloat.com/post/learning-golang-templates.html
+    * https://stackoverflow.com/questions/26559557/how-do-you-serve-a-static-html-file-using-a-go-web-server
+1. Templates:
+    * https://medium.com/@IndianGuru/understanding-go-s-template-package-c5307758fab0
+    * https://rockfloat.com/post/learning-golang-templates.html
