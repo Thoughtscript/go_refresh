@@ -50,12 +50,14 @@ As such, it's imperative to use the correct Bash commands per **How Do I Use Thi
 
 ## Fantastic Resources
 
-1. REST: http://www.blog.labouardy.com/build-restful-api-in-go-and-mongodb/
+1. REST: 
+    * http://www.blog.labouardy.com/build-restful-api-in-go-and-mongodb/
     * Gin: https://gin-gonic.github.io/gin/
 1. Go Routines: 
     * https://medium.com/@nikolay.bystritskiy/how-i-tried-to-do-things-asynchronously-in-golang-40e0c1a06a66
     * https://gobyexample.com/goroutines
-1. Static: http://www.alexedwards.net/blog/serving-static-sites-with-go
+1. Static: 
+    * http://www.alexedwards.net/blog/serving-static-sites-with-go
     * https://rockfloat.com/post/learning-golang-templates.html
     * https://stackoverflow.com/questions/26559557/how-do-you-serve-a-static-html-file-using-a-go-web-server
 1. Templates:
