@@ -1,9 +1,8 @@
-package api
+package handlers
 
 import (
-	"gorilla/mux"
-	"net/http"
 	"encoding/json"
+	"net/http"
 	s "../data"
 )
 
@@ -16,8 +15,4 @@ func GetAll(w http.ResponseWriter, r *http.Request) {
 	w.Header().Set("Content-Type", "application/json")
 	w.WriteHeader(http.StatusCreated)
 	json.NewEncoder(w).Encode(exampleSchema)
-}
-
-func CreateApi(r mux.Router) {
-	r.HandleFunc("/example", GetAll).Methods("GET")
 }

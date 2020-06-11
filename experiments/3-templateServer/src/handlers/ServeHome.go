@@ -1,16 +1,15 @@
 package handlers
 
 import (
-	"net/http"
-	"time"
 	m "../models"
 	"html/template"
-	"path"
+	"net/http"
+	"time"
 )
 
 func ServeHome(w http.ResponseWriter, r *http.Request) {
-
-	tmpl := template.Must(template.ParseFiles(path.Dir("../assets/test.html")))
+	// change this
+	tmpl := template.Must(template.ParseFiles(`/Users/adamgerard/Desktop/Workspace/_code/go_refresh/experiments/3-templateServer/src/assets/test.html`))
 
 	now := time.Now()
 	homeTemplateVars := m.TemplateModel{
