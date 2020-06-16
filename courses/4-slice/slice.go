@@ -4,6 +4,7 @@ import (
 	"bufio"
 	"fmt"
 	"os"
+	"sort"
 	"strconv"
 )
 
@@ -29,7 +30,13 @@ func main() {
 				} else {
 					a = append(a, numInt)
 				}
-				fmt.Printf("Array: %v Capacity: %d Length %d \n", a, cap(a), len(a))
+
+				// Easier to copy and sort the copy
+				b := make([]int, len(a), len(a))
+				copy(b,a)
+				sort.Ints(b)
+				fmt.Printf("Array: %v Capacity: %d Length %d Entries %d \n", b, cap(b), len(b), idx)
+
 				// Exception handling
 				if iErr != nil {
 					fmt.Println("Int formatting exception encountered: " + iErr.Error())
