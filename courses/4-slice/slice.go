@@ -11,6 +11,7 @@ import (
 func main() {
 	a := make([]int, 3, 3)
 	idx := 0
+	entries := 0
 	fmt.Println("Enter an integer or X to terminate the program: ")
 	// Use bufio scanner to read input
 	bscan := bufio.NewScanner(os.Stdin)
@@ -24,18 +25,19 @@ func main() {
 			} else {
 				pInt, iErr := strconv.ParseInt(line, 10, 64)
 				numInt := int(pInt)
-				if idx < len(a) {
+				if idx < 3 {
 					a[idx] = numInt
 					idx++
 				} else {
 					a = append(a, numInt)
 				}
+				entries++
 
 				// Easier to copy and sort the copy
 				b := make([]int, len(a), len(a))
 				copy(b,a)
 				sort.Ints(b)
-				fmt.Printf("Array: %v Capacity: %d Length %d Entries %d \n", b, cap(b), len(b), idx)
+				fmt.Printf("Array: %v Capacity: %d Length %d Entries %d \n", b, cap(b), len(b), entries)
 
 				// Exception handling
 				if iErr != nil {
