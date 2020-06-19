@@ -2,14 +2,30 @@ package main
 
 import "fmt"
 
-func Swap(arr []int, x int, y int) {
-	temp := arr[x]
-	arr[x] = arr[y]
-	arr[y] = temp
+func Swap(slice []int, i int) {
+	temp := slice[i]
+	slice[i] = slice[i+1]
+	slice[i+1] = temp
 }
 
-func BubbleSort(nums int) {
+func BubbleSort(slice []int) {
 
+	for i := 0; i < len(slice) -1; {
+		if slice[i] > slice[i+1] {
+			Swap(slice[0 : len(slice)], i)
+			fmt.Printf("Swapped num %d at index %d with num %d at index %d\n", slice[i], i,  slice[i+1], i+1)
+			fmt.Printf("Array state: %d \n", slice)
+			i = 0
+		} else {
+			i++
+		}
+	}
+
+}
+
+func main() {
+	
+	nums := 10
 	// array
 	arr := make([]int, nums, nums)
 
@@ -26,19 +42,5 @@ func BubbleSort(nums int) {
 
 	fmt.Println("\n Sorting array... \n")
 
-	for i := 0; i < len(arr) -1; {
-		if arr[i] > arr[i+1] {
-			Swap(arr, i, i+1)
-			fmt.Printf("Swapped num %d at index %d with num %d at index %d\n", arr[i], i,  arr[i+1], i+1)
-			fmt.Printf("Array state: %d \n", arr)
-			i = 0
-		} else {
-			i++
-		}
-	}
-
-}
-
-func main() {
-	BubbleSort(10)
+	BubbleSort(arr[0:len(arr)])
 }
