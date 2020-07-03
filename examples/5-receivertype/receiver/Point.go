@@ -1,4 +1,4 @@
-package data
+package receiver
 
 // Note this is a weakly OOP language
 // Note the lack of inheritance and constructors
@@ -26,5 +26,13 @@ func NewPoint(X float32, Y float32, Z float32) *Point{
 // Copy of value made
 
 func AddCoordinates(p Point) float32 {
+	return p.X + p.Y + p.Z
+}
+
+// Receiver type function
+// This is also how visibility is controlled:
+// By exporting receiver methods but limiting exporting of structs (by using lower-case names)
+
+func (p Point) AdditionReceiver () float32 {
 	return p.X + p.Y + p.Z
 }

@@ -39,7 +39,7 @@ func main() {
 
 	fmt.Printf("Array of stucts: %s \n", db)
 
-	// Iterates through array printing data
+	// Iterates through array printing receiver
 	for i := 0; i < len(db); i++ {
 		fmt.Println(" First name: " + db[i].firstname + " Last name: " + db[i].lastname)
 	}
