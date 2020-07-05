@@ -6,6 +6,12 @@ import (
 	"fmt"
 )
 
+// GoLang generic
+// The empty interface specifies that any type may be passed
+func golangGeneric(val interface{}) {
+	fmt.Println(val)
+}
+
 func main() {
 	a := data.Point{1, 2, 3}
 	fmt.Println(a)
@@ -20,4 +26,6 @@ func main() {
 
 	d := a.AdditionReceiver()
 	fmt.Println(d)
+
+	golangGeneric(a)
 }
