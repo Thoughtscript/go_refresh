@@ -38,7 +38,7 @@ func channelTestExample(s string) {
 	//Create a goroutine to pass strings into the output channel
 	resultOne := <- outputChannel
 
-	//The following go rutine will not send its message
+	//The following go routine will not send its message
 	go func() { outputChannel <- "Test Message Three" }()
 	resultTwo := <- outputChannel
 
